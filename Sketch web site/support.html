@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Support | University of Westminster Student Employability Guide</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Page-specific styles for the Support page -->
+  <style>
+    .support-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.5rem 2rem;
+      padding-left: 1.25rem;
+    }
+
+    .support-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .option-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.25rem 0;
+    }
+
+    .option-buttons button {
+      background-color: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      border-radius: var(--radius);
+      padding: 0.65rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .option-buttons button:hover,
+    .option-buttons button:focus {
+      background-color: var(--navy);
+      color: var(--white);
+    }
+
+    .option-buttons button[aria-pressed="true"] {
+      background-color: var(--accent-blue);
+      color: var(--white);
+      border-color: var(--accent-blue);
+    }
+
+    #option-details {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      min-height: 3rem;
+    }
+
+    dl.term-list dt {
+      font-weight: bold;
+      color: var(--navy);
+      margin-top: 0.9rem;
+    }
+
+    dl.term-list dd {
+      margin: 0.15rem 0 0;
+      color: var(--text-muted);
+    }
+
+    .support-hero {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .support-hero img {
+      flex: 1 1 280px;
+      max-width: 340px;
+    }
+
+    .support-hero div {
+      flex: 2 1 320px;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Shared header ===== -->
+    <header class="site-header">
+    <a class="site-title" href="splash.html">
+      <img class="crest" src="images/crest.svg" alt="" aria-hidden="true">
+      <span>Student Employability Guide</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu ☰</button>
+
+    <nav class="main-nav" id="primary-navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="splash.html">Home</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="support-hero">
+      <img src="images/support-illustration.svg" alt="Illustration of a careers advisor and a student talking across a desk during a support session">
+      <div>
+        <p class="eyebrow">Student Support</p>
+        <h1>Careers &amp; Employability Support</h1>
+        <p>
+          Starting university can feel like a lot at once. The University's employability and careers
+          service, <strong>Zone29</strong>, is here to help you build skills, explore career options and
+          prepare for opportunities &mdash; from your very first term through to graduation. Most job
+          searching, appointment booking and personalised support happens through Zone29's online
+          platform, <strong>CareerZone</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ways We Can Help</h2>
+      <ul class="support-list">
+        <li>One-to-one careers appointments, booked through CareerZone</li>
+        <li>CV, cover letter and application support</li>
+        <li>Mock interviews and assessment centre practice</li>
+        <li>Employer talks, careers fairs and skills workshops</li>
+        <li>The Westminster Award &ndash; a structured pathway for building your CV</li>
+        <li>Future Ready Mentoring &ndash; matched with an industry professional</li>
+        <li>Talent Bank &ndash; paid part-time roles within the University</li>
+        <li>Volunteering opportunities that build transferable skills</li>
+        <li>Support finding internships, placements and graduate schemes</li>
+        <li>Help starting or growing a business through WeNetwork</li>
+      </ul>
+    </section>
+
+    <section class="section-alt">
+      <h2>Key Terms</h2>
+      <p>A few terms you will see used throughout this site:</p>
+      <dl class="term-list">
+        <dt>Zone29</dt>
+        <dd>The University of Westminster's employability and careers service, based at 29 Marylebone Road. It runs careers appointments, mentoring, events and enterprise support.</dd>
+
+        <dt>CareerZone</dt>
+        <dd>Zone29's online platform, used to search for jobs, book careers appointments and manage your employability activity in one place.</dd>
+
+        <dt>Westminster Award</dt>
+        <dd>A structured, self-paced scheme that recognises the skills and experience you build outside your course, such as volunteering, mentoring or work experience.</dd>
+
+        <dt>CV (Curriculum Vitae)</dt>
+        <dd>A short document summarising your education, skills and experience for employers.</dd>
+
+        <dt>Cover letter</dt>
+        <dd>A letter sent with your CV that explains why you are a good fit for a specific role.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Compare Your Options</h2>
+      <p>Not sure what these terms mean yet? Choose one to see a short explanation.</p>
+
+      <div class="option-buttons">
+        <button type="button" data-info="An internship is usually a short, paid work experience, often over the summer, that lasts a few weeks to a few months. It is a great way to try out an industry before you commit to it long-term.">Internship</button>
+        <button type="button" data-info="A placement is a longer period of work, often a full academic year as part of a sandwich degree. Placements give you deeper, sustained experience and often lead to a graduate job offer.">Placement</button>
+        <button type="button" data-info="A graduate scheme is a structured programme run by an employer for students who have just finished their degree. It usually includes training, rotations across different teams, and a clear career path.">Graduate Scheme</button>
+      </div>
+
+      <p id="option-details">Select a button above to see more information here.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== Shared footer ===== -->
+  <footer class="site-footer">
+    <ul class="footer-links">
+      <li><a href="mailto:w2212605@westminster.ac.uk">w2212605@westminster.ac.uk</a></li>
+      <li><a href="Page_Editor.html">Page Editor</a></li>
+      <li><a href="validation.html">Validation</a></li>
+    </ul>
+    <small>&copy; 2026 University of Westminster Student Employability Guide. Coursework project &ndash; 4COSC011W.</small>
+  </footer>
+
+  <button id="go-to-top" aria-label="Go to top of page">&uarr;</button>
+
+  <script src="common.js"></script>
+
+  <!-- Page-specific script: shows information about Internship / Placement / Graduate Scheme -->
+  <script>
+    const optionButtons = document.querySelectorAll(".option-buttons button");
+    const optionDetails = document.querySelector("#option-details");
+
+    optionButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        // Update the text shown to the visitor
+        optionDetails.textContent = button.dataset.info;
+
+        // Reset every button, then mark this one as pressed
+        optionButtons.forEach(function (btn) {
+          btn.setAttribute("aria-pressed", "false");
+        });
+        button.setAttribute("aria-pressed", "true");
+      });
+    });
+  </script>
+
+</body>
+</html>

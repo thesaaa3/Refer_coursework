@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | University of Westminster Student Employability Guide</title>
+
+  <!-- Automatic redirect-->
+  <meta http-equiv="refresh" content="3; url=support.html">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Page-specific styles for the splash screen -->
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      padding-top: 0;
+      /*the splash screen fills and no header offset needed */
+    }
+
+    .splash-screen {
+      max-width: none;
+      /* override the shared "main" max-width so this goes edge-to-edge */
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      /* handles mobile browser toolbars more accurately */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 55%, var(--accent-blue) 100%);
+      color: var(--white);
+    }
+
+    .splash-crest {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1.5rem;
+    }
+
+    .splash-screen h1 {
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .splash-screen p {
+      max-width: 40ch;
+      color: #e3ecf9;
+    }
+
+    .student-card {
+      margin-top: 2rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.75rem;
+      text-align: left;
+    }
+
+    .student-card dt {
+      font-weight: bold;
+      color: #bcd2ef;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .student-card dd {
+      margin: 0 0 0.75rem;
+      font-size: 1.05rem;
+    }
+
+    .student-card dd:last-child {
+      margin-bottom: 0;
+    }
+
+    .redirect-note {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #cfdff4;
+    }
+
+    .redirect-note a {
+      color: var(--white);
+      font-weight: bold;
+    }
+
+    #countdown {
+      display: inline-block;
+      min-width: 1.4ch;
+      font-weight: bold;
+      color: var(--white);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="splash-screen">
+    <img class="splash-crest" src="images/crest.svg" alt="University of Westminster Employability Guide crest">
+
+    <h1>University of Westminster<br>Student Employability Guide</h1>
+    <p>Welcome!This site brings information of the University's employability and careers service,to help first year
+      students find support, opportunities and useful contacts.</p>
+
+    <dl class="student-card">
+      <dt>Student name</dt>
+      <dd>Thesandu Methvan</dd>
+
+      <dt>Student ID</dt>
+      <dd>20250329 | W22126054</dd>
+
+      <dt>Module</dt>
+      <dd>4COSC011W &ndash; Web Development</dd>
+    </dl>
+
+    <p class="redirect-note">
+      <i>You will be taken to the <b>Student Support</b> page automatically in <span id="countdown">3</span>
+        seconds.</i>
+      <br>
+      If nothing happens, <a href="support.html">continue to Student Support &rarr;</a>
+    </p>
+  </main>
+
+  <!-- Page-specific script: shows a visible countdown.
+       This is just for display - the actual redirect is still handled
+       by the meta refresh tag in the head. -->
+  <script>
+    let secondsLeft = 3;
+    const countdownEl = document.querySelector("#countdown");
+
+    const countdownTimer = setInterval(function () {
+      secondsLeft = secondsLeft - 1;
+
+      if (secondsLeft <= 0) {
+        clearInterval(countdownTimer);
+        countdownEl.textContent = "0";
+      } else {
+        countdownEl.textContent = secondsLeft;
+      }
+    }, 1000);
+  </script>
+
+</body>
+
+</html>

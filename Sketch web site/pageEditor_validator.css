@@ -1,0 +1,236 @@
+
+:root {
+  --navy: #14315e;
+  --navy-dark: #0d2347;
+  --accent-blue: #1e73be;
+  --accent-blue-dark: #175a94;
+  --light-blue: #eaf3fc;
+  --white: #ffffff;
+  --text-dark: #1c1f26;
+  --text-muted: #4a5566;
+  --border-light: #d7e4f3;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+h2 {
+  color: var(--navy);
+}
+
+a {
+  color: var(--accent-blue);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-blue-dark);
+}
+
+/* ---- Layout ---- */
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  background-color: var(--light-blue);
+  color: var(--text-dark);
+  padding: 15px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  margin-right: 20px;
+}
+
+aside a {
+  text-decoration: none;
+  color: var(--accent-blue-dark);
+  font-weight: bold;
+}
+
+aside a:hover,
+aside a:focus {
+  text-decoration: underline;
+}
+
+aside li {
+  padding-bottom: 4px;
+}
+
+/* ---- Sections / cards ---- */
+section {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background-color: var(--white);
+}
+
+.ref li {
+  list-style: none;
+  padding-bottom: 9px;
+}
+
+/* ---- Header / footer ---- */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-title .crest {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.site-title span {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Hamburger button for small screens */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--white);
+  border-radius: var(--radius);
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+.site-footer {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.site-footer small {
+  color: #c7d4e8;
+}
+
+.site-footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* ---- Student name / ID strip ---- */
+.stud {
+  text-align: center;
+  line-height: 1.6;
+  background-color: var(--light-blue);
+  color: var(--text-dark);
+  padding: 10px 0;
+  margin-top: 8px;
+  border-radius: var(--radius);
+}
+
+/* ---- Go-to-top button ---- */
+.top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.top a {
+  padding: 10px 20px;
+  background-color: var(--accent-blue);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.top a:hover {
+  background-color: var(--accent-blue-dark);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Images ---- */
+img {
+  max-width: 90%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+}
+
+/* ---- Tables ---- */
+table {
+  border: 1px solid var(--border-light);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 6px 8px;
+  border: 1px solid var(--border-light);
+}
+
+thead {
+  background-color: var(--navy);
+  color: var(--white);
+}

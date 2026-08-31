@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Site crest">
+  <circle cx="24" cy="24" r="22" fill="#ffffff" />
+  <circle cx="24" cy="24" r="22" fill="none" stroke="#1e73be" stroke-width="2" />
+  <path d="M24 10 L38 17 L24 24 L10 17 Z" fill="#14315e" />
+  <path d="M14 20 L14 28 C14 31 34 31 34 28 L34 20" fill="none" stroke="#14315e" stroke-width="2" />
+  <line x1="38" y1="17" x2="38" y2="27" stroke="#1e73be" stroke-width="2" />
+</svg>

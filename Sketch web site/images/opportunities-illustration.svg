@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-labelledby="pathTitle">
+  <title id="pathTitle">Illustration of steps leading upward, representing a career pathway from internship to graduate role</title>
+  <rect width="400" height="200" fill="#eaf3fc" rx="12" />
+  <rect x="40" y="150" width="70" height="30" fill="#1e73be" />
+  <rect x="130" y="120" width="70" height="60" fill="#1e73be" />
+  <rect x="220" y="90" width="70" height="90" fill="#1e73be" />
+  <rect x="310" y="55" width="70" height="125" fill="#14315e" />
+  <text x="75" y="145" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Arial, sans-serif">Y1</text>
+  <text x="165" y="115" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Arial, sans-serif">Y2</text>
+  <text x="255" y="85" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Arial, sans-serif">Y3</text>
+  <text x="345" y="50" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Arial, sans-serif">Grad</text>
+  <circle cx="345" cy="35" r="10" fill="#ffffff" stroke="#14315e" stroke-width="2" />
+</svg>

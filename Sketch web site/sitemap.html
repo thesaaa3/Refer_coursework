@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Map | University of Westminster Student Employability Guide</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Page-specific styles for the Site Map page -->
+  <style>
+    .sitemap-wrapper {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 1rem;
+      overflow-x: auto;
+    }
+
+    .sitemap-wrapper svg {
+      width: 100%;
+      height: auto;
+      min-width: 640px;
+    }
+
+    .site-node rect {
+      fill: var(--accent-blue);
+      stroke: var(--navy);
+      stroke-width: 2;
+      transition: fill 0.15s ease;
+    }
+
+    .site-node.home rect {
+      fill: var(--navy);
+    }
+
+    .site-node text {
+      fill: var(--white);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      pointer-events: none;
+    }
+
+    .site-node:hover rect,
+    .site-node:focus rect {
+      fill: var(--accent-blue-dark);
+    }
+
+    .site-node.main-page.is-highlighted rect {
+      fill: #ffb703;
+      stroke: var(--navy-dark);
+    }
+
+    .site-node.main-page.is-highlighted text {
+      fill: var(--navy-dark);
+    }
+
+    .sitemap-lines line {
+      stroke: var(--navy);
+      stroke-width: 2;
+    }
+
+    .legend {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Shared header ===== -->
+    <header class="site-header">
+    <a class="site-title" href="splash.html">
+      <img class="crest" src="images/crest.svg" alt="" aria-hidden="true">
+      <span>Student Employability Guide</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu ☰</button>
+
+    <nav class="main-nav" id="primary-navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="splash.html">Home</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="sitemap.html" aria-current="page">Site Map</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section>
+      <p class="eyebrow">Site Map</p>
+      <h1>How This Site Fits Together</h1>
+      <p>
+        The diagram below shows every page on this site and how they connect. Each box is a
+        clickable link &mdash; select one to go straight to that page.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Site map diagram</h2>
+      <div class="btn-group">
+        <button type="button" id="highlight-main-btn" class="btn">Highlight main pages</button>
+      </div>
+
+      <div class="sitemap-wrapper">
+        <svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sitemapTitle sitemapDesc">
+          <title id="sitemapTitle">Diagram of the site structure</title>
+          <desc id="sitemapDesc">The Home page connects to Support, Opportunities, Site Map and Contact. The Site Map page also connects to the Page Editor and Validation pages.</desc>
+
+          <!-- Connecting lines (drawn first, so they sit behind the boxes) -->
+          <g class="sitemap-lines">
+            <line x1="400" y1="90" x2="145" y2="160" />
+            <line x1="400" y1="90" x2="315" y2="160" />
+            <line x1="400" y1="90" x2="485" y2="160" />
+            <line x1="400" y1="90" x2="655" y2="160" />
+            <line x1="485" y1="210" x2="290" y2="300" />
+            <line x1="485" y1="210" x2="510" y2="300" />
+          </g>
+
+          <!-- Home -->
+          <a href="splash.html">
+            <g class="site-node home" tabindex="0">
+              <rect x="330" y="40" width="140" height="50" rx="8" />
+              <text x="400" y="66">Home</text>
+            </g>
+          </a>
+
+          <!-- Row 2: main pages -->
+          <a href="support.html">
+            <g class="site-node main-page" tabindex="0">
+              <rect x="70" y="160" width="150" height="50" rx="8" />
+              <text x="145" y="186">Support</text>
+            </g>
+          </a>
+
+          <a href="opportunities.html">
+            <g class="site-node main-page" tabindex="0">
+              <rect x="240" y="160" width="150" height="50" rx="8" />
+              <text x="315" y="186">Opportunities</text>
+            </g>
+          </a>
+
+          <a href="sitemap.html">
+            <g class="site-node main-page" tabindex="0">
+              <rect x="410" y="160" width="150" height="50" rx="8" />
+              <text x="485" y="186">Site Map</text>
+            </g>
+          </a>
+
+          <a href="contact.html">
+            <g class="site-node main-page" tabindex="0">
+              <rect x="580" y="160" width="150" height="50" rx="8" />
+              <text x="655" y="186">Contact</text>
+            </g>
+          </a>
+
+          <!-- Row 3: coursework resource pages -->
+          <a href="Page_Editor.html">
+            <g class="site-node" tabindex="0">
+              <rect x="200" y="300" width="180" height="50" rx="8" />
+              <text x="290" y="326">Page Editor</text>
+            </g>
+          </a>
+
+          <a href="validation.html">
+            <g class="site-node" tabindex="0">
+              <rect x="420" y="300" width="180" height="50" rx="8" />
+              <text x="510" y="326">Validation</text>
+            </g>
+          </a>
+        </svg>
+      </div>
+
+      <p class="legend">
+        <span><span class="swatch" style="background-color: var(--navy);"></span> Home page</span>
+        <span><span class="swatch" style="background-color: var(--accent-blue);"></span> Site page</span>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===== Shared footer ===== -->
+ <footer class="site-footer">
+    <ul class="footer-links">
+      <li><a href="mailto:w2212605@westminster.ac.uk">w2212605@westminster.ac.uk</a></li>
+      <li><a href="Page_Editor.html">Page Editor</a></li>
+      <li><a href="validation.html">Validation</a></li>
+    </ul>
+    <small>&copy; 2026 University of Westminster Student Employability Guide. Coursework project &ndash; 4COSC011W.</small>
+  </footer>
+  <button id="go-to-top" aria-label="Go to top of page">&uarr;</button>
+
+  <script src="common.js"></script>
+
+  <!-- Page-specific script: highlights the four main navigation pages in the diagram -->
+  <script>
+    const highlightMainBtn = document.querySelector("#highlight-main-btn");
+    const mainPageNodes = document.querySelectorAll(".site-node.main-page");
+
+    highlightMainBtn.addEventListener("click", function () {
+      mainPageNodes.forEach(function (node) {
+        node.classList.toggle("is-highlighted");
+      });
+    });
+  </script>
+
+</body>
+</html>

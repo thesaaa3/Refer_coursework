@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Student Employability Guide</title>
+    <link rel="stylesheet" href="pageEditor_validator.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+   <header class="site-header">
+    <a class="site-title" href="splash.html">
+      <img class="crest" src="images/crest.svg" alt="" aria-hidden="true">
+      <span>Student Employability Guide</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu ☰</button>
+
+    <nav class="main-nav" id="primary-navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="splash.html">Home</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="container">
+        <main>
+            <section id="overview">
+                <h1>Page Editor Overview</h1>
+                <p>This Page Editor explains how the required pages for the referred/deferred coursework were implemented. It should describe the HTML, CSS and JavaScript used to create each page, explain how University of Westminster employability information was selected and cited, and provide links to the live pages and their validation evidence.</p>
+        </section>
+
+            <section id="splash">
+                <h2>Splash Page - <code>splash.html</code></h2>
+
+                <h3>Page Purpose</h3>
+                <p>Entry point to the site it shows student name,ID and the module,then it automatically redirects to <code>support.html</code> after 3seconds.</p>
+                <h3>HTML Implementation</h3>
+                <p>Uses a description list for student name,ID and module as term/description pairs; crest image <code><meta http-equiv="refresh">handles the redirect</code>.</p>
+                <h3>CSS Implementation</h3>
+                <p>Full viewport colour navy to blue gradient background,Flexboard centering and semi transparent panel with rounded corners.</p>
+                <h3>JavaScript Implementation</h3>
+                <p>not needed for the redirect itself (meta refresh handles that); a small script only powers the visible countdown number using <code>setInterval</code>()
+
+                <h3>Accessibility</h3>
+                <p>Single <code>h1</code>,descriptive alt text on the crest,fallback manual link in case the redirect fails</p>
+
+                <h3>Links</h3>
+                <p><a href="splash.html" target="_blank">Open the Splash page</a></p>
+                <p><a href="validation.html#splashVal">View validation evidence for the Splash page</a></p>
+            </section>
+
+            <section id="support">
+                <h2>Career Support and Terms Page - <code>support.html</code></h2>
+
+                <h3>Page Purpose</h3>
+                <p>Introduces Zone29 (the University's careers/employability service) and CareerZone (its online platform), lists the ways students can get support, explains key employability terms, and lets users compare Internship,Placement and Graduate Scheme.</p>
+                <h3>HTML Implementation</h3>
+                <p><code>.support-hero</code> section pairs an illustration with an into paragraph.<br></p>
+                <p><code>ul class="support-list"</code>lists ten ways Zone29 can help<br></p>
+                <p>Compare your options secttion has three <code>button</code> elements each carrying its explanation text in a data info attribute.<br></p>
+
+                <h3>CSS Implementation</h3>
+                <p><code>.support_list uses CSS grid to lay the list out in responsive multi column format instead of one long vertical list<br></code>
+                    <p><code>.option-buttons</code> button styling gives outlined navy buttons that invert (navy background, white text) on hover/focus, and a distinct accent-blue "pressed" state via <code>button[aria-pressed="true"]</code><br></p>
+                <h3>JavaScript Implementation</h3>
+                <p>Selects all buttons inside .option-buttons with querySelectorAll()<br>
+                <p>the<code> #option-details</code> paragraph with <code>querySelector()</code></p>
+                <p>On click, each button's handler reads its own data-info attribute and writes that text into #option-details.text Content</p>
+
+                <h3>Use of University Sources</h3>
+                <p>I used Zone29 university of westminster to take an idea how to make this website and also main website of university of westminster</p>
+
+                <h3>Accessibility</h3>
+                <p>Every button is keyboard-accessible and shows which option is selected using <code>aria-pressed</code>. Key terms use <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> so screen readers read them as term-definition pairs. The image has alt text, and focus outlines are visible when tabbing through the page.</p>
+
+                <h3>Links</h3>
+                <p><a href="support.html" target="_blank">Open the Career Support and Terms page</a></p>
+                <p><a href="validation.html#supportVal">View validation evidence for the Career Support and Terms page</a></p>
+            </section>
+
+            <section id="opportunities">
+                <h2>Opportunities Page - <code>opportunities.html</code></h2>
+
+                <h3>Page Purpose</h3>
+                <p>Page purpose shows employability oppotunities available at each year of study</p>
+                <h3>HTML Implementation</h3>
+                <p>Hero section with illustration and intro;<code> table </code> with <code>caption</code>,<code>thead</code>,<code>tbody</code>;rowspan="2" groups two year 1 rows; colspan="4" for a full width note row</p>
+                <p>navy header row, alternating row colours,hover highlight,highlighted outline style for toggled rows</p>
+
+                <h3>JavaScript Implementation</h3>
+                <p>#highlight-btn click listener toggles .highlighted class on rows where data-year === "1", using querySelectorAll()</p>
+
+                <h3>Use of University Sources</h3>
+                <p>Explain which University of Westminster employability, Zone29, CareerZone or jobs and experiences pages informed this page.</p>
+
+                <h3>Accessibility</h3>
+                <p>Explain how the table and page content were made readable and accessible, including meaningful headings, table structure, image alternative text and clear link text.</p>
+
+                <h3>Links</h3>
+                <p><a href="opportunities.html" target="_blank">Open the Opportunities page</a></p>
+                <p><a href="validation.html#opportunitiesVal">View validation evidence for the Opportunities page</a></p>
+            </section>
+
+            <section id="sitemap">
+                <h2>Sitemap Page - <code>sitemap.html</code></h2>
+
+                <h3>Page Purpose</h3>
+                <p>This page shows a visual diagram of the site so users can see how every page connects to each other, and click straight through to any page from the diagram.</p>
+
+                <h3>HTML and SVG Implementation</h3>
+                <p>The diagram is built using an inline <code>&lt;svg&gt;</code>. Each page is represented by a <code>&lt;g&gt;</code> element containing a box (<code>&lt;rect&gt;</code>) and a text label, wrapped inside an <code>&lt;a&gt;</code> tag so the whole box is clickable. <code>&lt;line&gt;</code> elements are used to draw the connecting lines between pages.</p>
+
+                <h3>CSS Implementation</h3>
+                <p>Embedded CSS colours the Home page box differently from the other pages, adds a hover effect that darkens the boxes, and applies a gold "highlighted" style to the main pages when the button below is clicked. A legend explains what each colour means.</p>
+
+                <h3>JavaScript Implementation</h3>
+                <p>A script selects the <code>#highlight-main-btn</code> button and all the main page boxes using <code>querySelectorAll()</code>. When the button is clicked, it adds or removes a <code>.is-highlighted</code> class on each of those boxes to change their colour.</p>
+
+                <h3>Accessibility</h3>
+                <p>Each box in the diagram has <code>tabindex="0"</code> so it can be reached using the keyboard, and the SVG includes a text description so screen reader users who can't see the diagram still understand how the pages connect.</p>
+
+                <h3>Links</h3>
+                <p><a href="sitemap.html" target="_blank">Open the Sitemap page</a></p>
+                <p><a href="validation.html#sitemapVal">View validation evidence for the Sitemap page</a></p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact / Enquiry Page - <code>contact.html</code></h2>
+
+                <h3>Page Purpose</h3>
+                <p>This page lets students fill in a form to ask Zone29 a question about careers support, internships or graduate schemes.</p>
+
+                <h3>HTML Implementation</h3>
+                <p>The form uses two <code>&lt;fieldset&gt;</code> groups with a <code>&lt;legend&gt;</code> each &mdash; "Details" and "Your Enquiry" &mdash; to group related fields together. Each input has its own <code>&lt;label&gt;</code>, and the fields include a text input for the name, an email input, two dropdown <code>&lt;select&gt;</code> menus, and a <code>&lt;textarea&gt;</code> for the message. There is a submit button and a reset button at the bottom.</p>
+
+                <h3>CSS Implementation</h3>
+                <p>Embedded CSS styles the fieldsets with rounded borders and a bold navy legend, gives all inputs and the textarea a consistent border and padding, and styles error messages in red below each field. The status message turns green when the form is filled in correctly.</p>
+
+                <h3>JavaScript Implementation</h3>
+                <p>A script listens for the form's <code>submit</code> event and uses <code>event.preventDefault()</code> to stop the page from actually submitting. It checks the name, email and message fields using <code>querySelector()</code>, and shows an error message next to any field that is empty (or if the email doesn't contain an "@"). If everything is filled in correctly, it shows a success message; otherwise it tells the user to fix the errors above.</p>
+
+                <h3>Use of University Sources</h3>
+                <p>The University's Zone29 address and contact details were used to make the page feel realistic. [Add the specific page link you used]</p>
+
+                <h3>Accessibility</h3>
+                <p>Every field has its own <code>&lt;label&gt;</code>, and the two fieldsets use <code>&lt;legend&gt;</code> so screen readers announce which group a field belongs to. The status message uses <code>role="status"</code> so screen readers automatically announce whether the form was submitted successfully or has errors, without the user needing to find it manually.</p>
+
+                <h3>Links</h3>
+                <p><a href="contact.html" target="_blank">Open the Contact / Enquiry page</a></p>
+                <p><a href="validation.html#contactVal">View validation evidence for the Contact / Enquiry page</a></p>
+            </section>
+
+            <section id="common-template">
+                <h2>Common Template, CSS and JavaScript</h2>
+                <p>Every main page shares the same header, navigation menu, footer and go-to-top button, all controlled by one shared file, <code>style.css</code>. The current page is shown with a different style using <code>aria-current="page"</code>, and the nav links have a hover colour and a slightly darker colour when clicked. Each page also has its own <code>&lt;style&gt;</code> block for anything specific to that page only, like the table styling on the Opportunities page or the SVG colours on the Sitemap page.</p>
+            </section>
+
+            <section id="sources">
+                <h2>Use of University of Westminster Employability Sources</h2>
+                <p>Information for this site was based on the University of Westminster's Zone29 careers service and its main employability page, and was rewritten in my own words rather than copied. [Add the specific page links you used, e.g. westminster.ac.uk/current-students/employability]</p>
+            </section>
+
+            <section id="challenge">
+                <h2>Challenges and Lessons Learned</h2>
+                <p>A few issues came up while building the site. Some links pointed to the wrong filenames (like a leftover reference to an old file name instead of <code>Page_Editor.html</code>), which meant they didn't work until the filenames were fixed. Some images didn't show up because they were saved inside an <code>images</code> folder but the code was missing that folder name in the path. The W3C validator also caught missing spaces between HTML attributes, and pointed out that a couple of sections were missing headings, which I fixed by adding hidden headings for screen readers. This taught me to double check file names and image paths carefully, and to always run pages through the validator.</p>
+            </section>
+
+            <section id="compliance">
+                <h2>Accessibility and Janet Compliance</h2>
+                <p>Every page uses one main heading, clear smaller headings underneath, and alt text on all images. Buttons and links can all be used with the keyboard, and the current page is always shown clearly in the navigation menu.</p>
+                <p>This site follows the Janet Acceptable Use Policy: all writing is my own, based on public University of Westminster pages, and no offensive, copied or copyrighted content has been used. <a href="https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/compliance.html" target="_blank">See the lecture notes for more details on compliance.</a></p>
+            </section>
+
+            <section id="ref">
+                <h2>References</h2>
+                <p>Provide all sources used in a consistent format. Include University of Westminster pages, tutorials, lecture materials, images, icons, code references and any AI tools if used.</p>
+                <ul class="ref">
+                    <li>University of Westminster (2026) <i>Employability.</i> Available at: <a href="https://www.westminster.ac.uk/current-students/employability" target="_blank">https://www.westminster.ac.uk/current-students/employability</a> (Accessed: add date).</li>
+                    <li>Anthropic (2026) <i>Claude AI.</i> Available at: <a href="https://claude.ai" target="_blank">https://claude.ai</a> (2026/08/20). Used for help with HTML structure, fixing validation errors, and writing this report.</li>
+                    <li>Add any other image, tutorial or documentation references used.</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <aside>
+            <h3>Page Editor Sections</h3>
+            <ul class="top-level-ul">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#splash">Splash page</a></li>
+                <li><a href="#support">Career Support and Terms page</a></li>
+                <li><a href="#opportunities">Opportunities page</a></li>
+                <li><a href="#sitemap">Sitemap page</a></li>
+                <li><a href="#contact">Contact / Enquiry page</a></li>
+                <li><a href="#common-template">Common template, CSS and JavaScript</a></li>
+                <li><a href="#sources">University sources</a></li>
+                <li><a href="#challenge">Challenges and lessons learned</a></li>
+                <li><a href="#compliance">Accessibility and Janet compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+   <footer class="site-footer">
+    <ul class="footer-links">
+      <li><a href="mailto:w2212605@westminster.ac.uk">w2212605@westminster.ac.uk</a></li>
+      <li><a href="Page_Editor.html">Page Editor</a></li>
+      <li><a href="validation.html">Validation</a></li>
+    </ul>
+    <small>&copy; 2026 University of Westminster Student Employability Guide. Coursework project &ndash; 4COSC011W.</small>
+  </footer>
+
+  <button id="go-to-top" aria-label="Go to top of page">&uarr;</button>
+
+  <script src="common.js"></script>
+</body>
+</html>

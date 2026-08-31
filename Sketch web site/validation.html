@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Evidence - Student Employability Guide</title>
+    <link rel="stylesheet" href="pageEditor_validator.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="site-header">
+        <a class="site-title" href="splash.html">
+            <img class="crest" src="images/crest.svg" alt="" aria-hidden="true">
+            <span>Student Employability Guide</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu ☰</button>
+
+        <nav class="main-nav" id="primary-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="splash.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="stud">
+        <h1>Thesandu Methvan - 20250329<br> referred/deferred coursework submission</br></h1>
+        <p>This page provides validation evidence for the pages submitted for the referred/deferred coursework.</p>
+    </section>
+
+    <div class="container">
+        <main>
+            <section id="overviewVal">
+                <h2>Validation Page Overview</h2>
+                <p>Use this page to provide evidence that each submitted HTML page has been checked using the W3C Markup
+                    Validation Service. Each section should include a screenshot of the validation result, a brief
+                    reflection on any issues found and fixed, and a link back to the matching Page Editor section.</p>
+                <p>Replace the placeholder image paths with your own validation screenshots. Each screenshot should
+                    clearly show the page name or URL and the validation result.</p>
+            </section>
+
+            <section id="splashVal">
+                <h2>Splash Page Validation Report - <code>splash.html</code></h2>
+                <p>The Nu Html Checker returned one error: the meta refresh tag <code>content="3;url=support.html"
+                </code> was missing the required space after the semicolon. This was fixed by changing it to <code>content="3; url=support.html"</code>.
+                 After this fix, the page passed with no errors or warnings.</p>
+                <img src="images/splash.png" alt="Validation screenshot for splash.html">
+
+                <h3>Back to Page Editor page</h3>
+                <p><a href="Page_Editor.html#splash">Back to the Splash page section in the Page Editor</a></p>
+                <h3>Back to Splash page </h3>
+                <p><a href="splash.html">Back to the Splash page</a></p>
+            </section>
+
+            <section id="supportVal">
+                <h2>Career Support and Terms Page Validation Report - <code>support.html</code></h2>
+                <p>I ran the "support.html" through the validator and not found any errors or warnings. The page passed validation successfully</p>
+                <img src="images/support.png" alt="Validation screenshot for support.html">
+
+                <h3>Back to Page Editor page</h3>
+                <p><a href="Page_Editor.html#support">Back to the Career Support and Terms section in the Page
+                        Editor</a></p>
+                <h3>Back to Support page </h3>
+                <p><a href="support.html">Back to the Support page</a></p>
+            </section>
+
+            <section id="opportunitiesVal">
+                <h2>Opportunities Page Validation Report - <code>opportunities.html</code></h2>
+                <p>The validator raised one warning: the second <code>&lt;section&gt;</code> (containing the highlight button and table) had no heading,
+                     since a <code>&lt;caption&gt;</code> on a table does not count as a section heading.
+                      This was fixed by adding a visually-hidden <code>&lt;h2&gt;</code> at the start of that section,
+                       keeping the visual design unchanged.</p>
+                <img src="images/opportunities.png" alt="Validation screenshot for opportunities.html">
+
+                <h3>Back to Page Editor page</h3>
+                <p><a href="Page_Editor.html#opportunities">Back to the Opportunities page section in the Page Editor</a></p>
+                <h3>Back to Opportunities page </h3>
+                <p><a href="opportunities.html">Back to the Opportunities page</a></p>
+            </section>
+
+            <section id="sitemapVal">
+                <h2>Sitemap Page Validation Report - <code>sitemap.html</code></h2>
+                <p>The validator found two issues with nav link cause of missing space between attributes;
+                     and missing heading section and also add visually hidden heading as same as the previous page.</p>
+                <img src="images/sitemap.png" alt="Validation screenshot for sitemap.html">
+
+                <h3>Back to Page Editor page</h3>
+                <p><a href="Page_Editor.html#sitemap">Back to the Sitemap page section in the Page Editor</a></p>
+                <h3>Back to Sitemap page </h3>
+                <p><a href="sitemap.html">Back to the Sitemap page</a></p>
+            </section>
+
+            <section id="contactVal">
+                <h2>Contact / Enquiry Page Validation Report - <code>contact.html</code></h2>
+                <p>In the Nu Html checker it didn't detected any errors.</p>
+                <img src="images/contact.png" alt="Validation screenshot for contact.html">
+
+                <h3>Back to Page Editor page</h3>
+                <p><a href="Page_Editor.html#contact">Back to the Contact / Enquiry page section in the Page Editor</a></p>
+                <h3>Back to Contact page </h3>
+                <p><a href="contact.html">Back to the Contact / Enquiry page</a></p>
+            </section>
+
+            <section id="editorVal">
+                <h2>Page Editor Validation Report - <code>editor.html</code></h2>
+                <p>Nu Html checker didn't detect any errors.</p>
+                <img src="images/page_editor.png" alt="Validation screenshot for Page editor.html">
+
+                <h3>Back to Page Editor page</h3>
+                <p><a href="Page_Editor.html#overview">Back to the Page Editor overview</a></p>
+            </section>
+
+            <section id="validationVal">
+                <h2>Validation Page Validation Report - <code>validation.html</code></h2>
+                <p>Nu Html checker didn't detect any errors.</p>
+                <img src="images/validation.png" alt="Validation screenshot for validation.html">
+
+                <h3>Back to Page Editor page</h3>
+                <p><a href="Page_Editor.html#overview">Back to the Page Editor overview</a></p>
+                <h3>Back to Validation page </h3>
+                <p><a href="validation.html">Back to the Validation page</a></p>
+            </section>
+
+        </main>
+
+        <aside>
+            <h3>Validation Sections</h3>
+            <ul class="top-level-ul">
+                <li><a href="#overviewVal">Overview</a></li>
+                <li><a href="#splashVal">Splash page validation</a></li>
+                <li><a href="#supportVal">Support page validation</a></li>
+                <li><a href="#opportunitiesVal">Opportunities page validation</a></li>
+                <li><a href="#sitemapVal">Sitemap page validation</a></li>
+                <li><a href="#contactVal">Contact page validation</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <ul class="footer-links">
+            <li><a href="mailto:w2212605@westminster.ac.uk">w2212605@westminster.ac.uk</a></li>
+            <li><a href="Page_Editor.html">Page Editor</a></li>
+            <li><a href="validation.html">Validation</a></li>
+        </ul>
+        <small>&copy; 2026 University of Westminster Student Employability Guide. Coursework project &ndash;
+            4COSC011W.</small>
+    </footer>
+
+    <button id="go-to-top" aria-label="Go to top of page">&uarr;</button>
+
+    <script src="common.js"></script>
+</body>
+
+</html>

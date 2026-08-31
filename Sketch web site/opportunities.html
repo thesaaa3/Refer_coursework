@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportunities | University of Westminster Student Employability Guide</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- styles -->
+  <style>
+    .opportunities-hero {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .opportunities-hero img {
+      flex: 1 1 280px;
+      max-width: 340px;
+    }
+
+    .opportunities-hero div {
+      flex: 2 1 320px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+    }
+
+    table.opportunities-table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 640px;
+    }
+
+    .opportunities-table caption {
+      text-align: left;
+      font-weight: bold;
+      color: var(--navy);
+      padding: 0.75rem 1rem 0.5rem;
+    }
+
+    .opportunities-table th,
+    .opportunities-table td {
+      border: 1px solid var(--border-light);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .opportunities-table thead th {
+      background-color: var(--navy);
+      color: var(--white);
+    }
+
+    .opportunities-table tbody tr:nth-child(even) {
+      background-color: var(--light-blue);
+    }
+
+    /* Table hover styling, required by the brief */
+    .opportunities-table tbody tr:hover {
+      background-color: #d6e8fb;
+    }
+
+    .opportunities-table tbody tr.highlighted {
+      outline: 3px solid var(--accent-blue);
+      outline-offset: -3px;
+    }
+
+    .year-cell {
+      font-weight: bold;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Shared header ===== -->
+   <header class="site-header">
+    <a class="site-title" href="splash.html">
+      <img class="crest" src="images/crest.svg" alt="" aria-hidden="true">
+      <span>Student Employability Guide</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu ☰</button>
+
+    <nav class="main-nav" id="primary-navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="splash.html">Home</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="opportunities.html" aria-current="page">Opportunities</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="opportunities-hero">
+      <img src="images/opportunities-illustration.svg" alt="Illustration of rising steps representing career progression from Year 1 to graduate roles">
+      <div>
+        <p class="eyebrow">Opportunities</p>
+        <h1>Opportunities by Year of Study</h1>
+        <p>
+          You do not need to wait until your final year to get started. Zone29 and its online platform,
+          CareerZone, list opportunities for every stage of your degree &mdash; from part-time roles in
+          Year 1 through to graduate schemes. The table below shows what is typically available and
+          where to look for it.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Opportunities table</h2>
+      <div class="btn-group">
+        <button type="button" id="highlight-btn" class="btn">Highlight Year 1 opportunities</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="opportunities-table">
+          <caption>Employability opportunities available across your degree</caption>
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col">Opportunity</th>
+              <th scope="col">Typical Length</th>
+              <th scope="col">Find It Via</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-year="1">
+              <td class="year-cell" rowspan="2">Year 1</td>
+              <td>Talent Bank part-time roles within the University</td>
+              <td>Ongoing, flexible hours</td>
+              <td>CareerZone</td>
+            </tr>
+            <tr data-year="1">
+              <td>Careers workshops, skills sessions &amp; employer talks</td>
+              <td>1&ndash;2 hours</td>
+              <td>Zone29 events</td>
+            </tr>
+            <tr data-year="2">
+              <td class="year-cell">Year 2</td>
+              <td>Westminster Working Cultures &ndash; short international workplace visits</td>
+              <td>A few days</td>
+              <td>Zone29 &ndash; Working &amp; studying abroad</td>
+            </tr>
+            <tr data-year="2">
+              <td class="year-cell">Year 2</td>
+              <td>Summer internships</td>
+              <td>6&ndash;10 weeks</td>
+              <td>CareerZone job listings</td>
+            </tr>
+            <tr data-year="3">
+              <td class="year-cell">Placement Year</td>
+              <td>Industrial / sandwich placement</td>
+              <td>9&ndash;12 months</td>
+              <td>Work experience &amp; placements (Zone29)</td>
+            </tr>
+            <tr data-year="4">
+              <td class="year-cell">Final Year</td>
+              <td>Graduate schemes</td>
+              <td>1&ndash;3 years</td>
+              <td>CareerZone job listings</td>
+            </tr>
+            <tr>
+              <td colspan="4" style="text-align:center; font-style: italic; color: var(--text-muted);">
+                The Westminster Award and Future Ready Mentoring run throughout every year of study &mdash;
+                check Zone29 events for current dates and deadlines.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Shared footer ===== -->
+ <footer class="site-footer">
+    <ul class="footer-links">
+      <li><a href="mailto:w2212605@westminster.ac.uk">w2212605@westminster.ac.uk</a></li>
+      <li><a href="Page_Editor.html">Page Editor</a></li>
+      <li><a href="validation.html">Validation</a></li>
+    </ul>
+    <small>&copy; 2026 University of Westminster Student Employability Guide. Coursework project &ndash; 4COSC011W.</small>
+  </footer>
+
+  <button id="go-to-top" aria-label="Go to top of page">&uarr;</button>
+
+  <script src="common.js"></script>
+
+  <!-- Page-specific script: highlights Year 1 rows in the table -->
+  <script>
+    const highlightBtn = document.querySelector("#highlight-btn");
+    const tableRows = document.querySelectorAll(".opportunities-table tbody tr");
+
+    highlightBtn.addEventListener("click", function () {
+      tableRows.forEach(function (row) {
+        if (row.dataset.year === "1") {
+          row.classList.toggle("highlighted");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

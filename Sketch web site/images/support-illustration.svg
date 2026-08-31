@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-labelledby="supportTitle">
+  <title id="supportTitle">Illustration of two people talking across a desk during a careers advice meeting</title>
+  <rect width="400" height="220" fill="#eaf3fc" rx="12" />
+  <rect x="40" y="150" width="320" height="14" fill="#c7d9ef" />
+  <!-- desk -->
+  <rect x="120" y="120" width="160" height="12" fill="#14315e" />
+  <rect x="130" y="132" width="10" height="30" fill="#14315e" />
+  <rect x="260" y="132" width="10" height="30" fill="#14315e" />
+  <!-- advisor -->
+  <circle cx="100" cy="90" r="22" fill="#1e73be" />
+  <rect x="78" y="112" width="44" height="45" rx="10" fill="#14315e" />
+  <!-- student -->
+  <circle cx="300" cy="90" r="22" fill="#1e73be" />
+  <rect x="278" y="112" width="44" height="45" rx="10" fill="#1e73be" />
+  <!-- speech bubble -->
+  <rect x="150" y="40" width="100" height="42" rx="10" fill="#ffffff" stroke="#14315e" stroke-width="2" />
+  <polygon points="180,82 180,95 195,82" fill="#ffffff" stroke="#14315e" stroke-width="2" />
+  <line x1="165" y1="55" x2="235" y2="55" stroke="#14315e" stroke-width="3" stroke-linecap="round" />
+  <line x1="165" y1="66" x2="215" y2="66" stroke="#14315e" stroke-width="3" stroke-linecap="round" />
+</svg>

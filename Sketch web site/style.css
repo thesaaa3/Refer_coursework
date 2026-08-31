@@ -1,0 +1,343 @@
+/* =========================================================
+   style.css
+   Shared styles for the University of Westminster
+   Student Employability Guide website.
+   These rules apply to every page. Each page also has its
+   own <style> block inside the HTML file for content that
+   is only used on that one page.
+   ========================================================= */
+
+/* ---- Design tokens (shared colours and sizes) ---- */
+:root {
+  --navy: #14315e;
+  --navy-dark: #0d2347;
+  --accent-blue: #1e73be;
+  --accent-blue-dark: #175a94;
+  --light-blue: #eaf3fc;
+  --white: #ffffff;
+  --text-dark: #1c1f26;
+  --text-muted: #4a5566;
+  --border-light: #d7e4f3;
+  --header-height: 72px;
+  --radius: 8px;
+  --max-width: 1100px;
+}
+
+/* ---- Reset-ish basics ---- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+  padding-top: var(--header-height); /* leaves room for the fixed header */
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent-blue);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-blue-dark);
+}
+
+/* Visible focus outline for keyboard users */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* ---- Skip link (accessibility) ---- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--white);
+  color: var(--navy);
+  padding: 0.75rem 1.25rem;
+  z-index: 2000;
+  border-radius: 0 0 var(--radius) 0;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-title .crest {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.site-title span {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Hamburger button for small screens */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--white);
+  border-radius: var(--radius);
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+/* Main navigation */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: var(--accent-blue);
+  color: var(--white);
+}
+
+/* Click / active feedback */
+.main-nav a:active {
+  background-color: var(--accent-blue-dark);
+}
+
+/* Current page indicator */
+.main-nav a[aria-current="page"] {
+  background-color: var(--white);
+  color: var(--navy);
+  font-weight: bold;
+}
+
+/* =========================================================
+   MAIN CONTENT LAYOUT
+   ========================================================= */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+.section-alt {
+  background-color: var(--light-blue);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--accent-blue-dark);
+  font-weight: bold;
+  margin: 0 0 0.35rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-blue);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.65rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-blue-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.site-footer small {
+  color: #c7d4e8;
+}
+
+/* Go to top */
+#go-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  color: var(--white);
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+}
+
+#go-to-top:hover,
+#go-to-top:focus {
+  background-color: var(--accent-blue-dark);
+}
+
+#go-to-top.visible {
+  display: flex;
+}
+
+/*Respon navigation */
+@media (max-width: 780px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--navy);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .main-nav.open {
+    max-height: 500px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .main-nav a {
+    padding: 0.85rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .main-nav {
+    transition: none;
+  }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | University of Westminster Student Employability Guide</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Content page styless -->
+  <style>
+    form {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 0.5rem 1.5rem 1.5rem;
+      max-width: 640px;
+    }
+
+    fieldset {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      margin: 1.25rem 0;
+      padding: 1rem 1.25rem 1.25rem;
+    }
+
+    legend {
+      font-weight: bold;
+      color: var(--navy);
+      padding: 0 0.5rem;
+    }
+
+    .field {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .error-message {
+      color: #b3261e;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+      min-height: 1.1rem;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    #form-status {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    #form-status.success {
+      color: #1a7a3b;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!--Header -->
+  <header class="site-header">
+    <a class="site-title" href="splash.html">
+      <img class="crest" src="images/crest.svg" alt="" aria-hidden="true">
+      <span>Student Employability Guide</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu ☰</button>
+
+    <nav class="main-nav" id="primary-navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="splash.html">Home</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section>
+      <p class="eyebrow">Contact</p>
+      <h1>Get in Touch</h1>
+      <p>
+        Have a question about careers support, internships or graduate schemes? Fill in the
+        form below, or reach Zone29 directly using the details on the right. Zone29 is based at
+        29 Marylebone Road, London and can also be contacted through live chat on the
+        official website or by phone on the University switchboard, +44 (0)20 7911 5000.
+      </p>
+      
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Contact</h2>
+      <form id="contact-form" novalidate>
+
+        <fieldset>
+          <legend>Details</legend>
+
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" name="fullName">
+            <p class="error-message" id="full-name-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="uni-email">University email</label>
+            <input type="email" id="uni-email" name="uniEmail" placeholder="you@my.westminster.ac.uk">
+            <p class="error-message" id="uni-email-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="study-level">Study level</label>
+            <select id="study-level" name="studyLevel">
+              <option value="">Select an option</option>
+              <option value="year1">Year 1</option>
+              <option value="year2">Year 2</option>
+              <option value="placement">Placement year</option>
+              <option value="final-year">Final year</option>
+              <option value="postgraduate">Postgraduate</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Enquiry</legend>
+
+          <div class="field">
+            <label for="enquiry-type">Enquiry type</label>
+            <select id="enquiry-type" name="enquiryType">
+              <option value="">Select an option</option>
+              <option value="cv-review">CV / cover letter review</option>
+              <option value="internship">Internship or placement advice</option>
+              <option value="graduate-scheme">Graduate scheme advice</option>
+              <option value="general">General question</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <p class="error-message" id="message-error"></p>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
+
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== Shared footer ===== -->
+  <footer class="site-footer">
+    <ul class="footer-links">
+      <li><a href="mailto:w2212605@westminster.ac.uk">w2212605@westminster.ac.uk</a></li>
+      <li><a href="Page_Editor.html">Page Editor</a></li>
+      <li><a href="validation.html">Validation</a></li>
+    </ul>
+    <small>&copy; 2026 University of Westminster Student Employability Guide. Coursework project &ndash; 4COSC011W.</small>
+  </footer>
+
+  <button id="go-to-top" aria-label="Go to top of page">&uarr;</button>
+
+  <script src="common.js"></script>
+
+  <!-- Page-specific script: simple, beginner-friendly form validation -->
+  <script>
+    const contactForm = document.querySelector("#contact-form");
+    const nameInput = document.querySelector("#full-name");
+    const emailInput = document.querySelector("#uni-email");
+    const messageInput = document.querySelector("#message");
+    const formStatus = document.querySelector("#form-status");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // stop the form from actually submitting anywhere
+
+      let formIsValid = true;
+
+      // Check the name field is not empty
+      if (nameInput.value.trim() === "") {
+        document.querySelector("#full-name-error").textContent = "Please enter your full name.";
+        formIsValid = false;
+      } else {
+        document.querySelector("#full-name-error").textContent = "";
+      }
+
+      // Check the email field looks like an email address
+      if (emailInput.value.trim() === "" || emailInput.value.indexOf("@") === -1) {
+        document.querySelector("#uni-email-error").textContent = "Please enter a valid email address.";
+        formIsValid = false;
+      } else {
+        document.querySelector("#uni-email-error").textContent = "";
+      }
+
+      // Check the message field is not empty
+      if (messageInput.value.trim() === "") {
+        document.querySelector("#message-error").textContent = "Please write a short message.";
+        formIsValid = false;
+      } else {
+        document.querySelector("#message-error").textContent = "";
+      }
+
+      // Show a status message depending on whether the form passed validation
+      if (formIsValid) {
+        formStatus.textContent = "Thanks! Your message looks good and is ready to send.";
+        formStatus.classList.add("success");
+      } else {
+        formStatus.textContent = "Please fix the errors above before submitting.";
+        formStatus.classList.remove("success");
+      }
+    });
+  </script>
+
+</body>
+</html>
